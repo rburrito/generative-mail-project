@@ -5,7 +5,7 @@ A project that was built by Claude (Opus 4.8) to help me learn and retain major 
 2. The more it adds things, the messier the whole project gets, and the worse it scales.
 3. Not building it yourself means that you are less familiar with how it works and small change I made that seemed to work fine broke 15 tests, which means I ended up having to rely on Claude to fix in the end.
 4. I became more of an interface tester to make sure that it actually built what it said it did.
-5. Without evals (using LLM as a judge) and tests, I would probably would not have found nearly as much issues as it did.
+5. Without evals (using LLM as a judge) and tests, I would probably would not have found nearly as much issues as it did. My project below:
 
 A product manager's email client (`pm@acme.com`) augmented with an LLM
 intelligence layer. Ten AI features analyze and act on email — summaries,
