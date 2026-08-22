@@ -1,12 +1,14 @@
-# GenMail — LLM-Powered Email Intelligence
 
-A project that was built by Claude (Sonnet) to help me learn and retain major concepts and how Claude builds. Note the very wordy description below and the presentation that details my experience in Claude's words. The major thing I learned building everything with Claude for the very first time instead of doing it myself: 
+# Personal Notes
+I used Claude (Sonnet) to build this project so I could get a hands-on feel for how it approaches development and learn major concepts along the way. Just a heads-up: the wordy write-up and presentation below are in Claude’s own words. Here are a few major lessons I learned from relying on Claude and using evals for a end-to-end build instead of writing it myself:
 1. Claude is generally good with individual pieces of code.
-2. The more it adds things, the messier the whole project gets, and the worse it scales.
-3. Not building it yourself means that you are less familiar with how it works and small change I made that seemed to work fine broke 15 tests, which means I ended up having to rely on Claude to fix in the end.
-4. I became more of an interface tester to make sure that it actually built what it said it did.
-5. Without evals (using Claude Opus 4.8 as a judge) and tests, I would probably would not have found nearly as much issues as it did. My project below:
+2. The more code Claude inserts, the messier the architecture gets, which really hurts the project's long-term scalability.
+3. Lacking deep familiarity with the inherited codebase, a seemingly minor edit broke 15 tests. I ultimately relied on Claude to quickly debug the failure modes and fix the suite.
+4. My role shifted toward interface and integration testing to ensure the system actually delivered what it was designed to build.
+5. If I hadn't set up tests and evals with Claude 4.8 Opus as the LLM judge, I probably would've missed most of these edge cases.
+6. You can't completely rely on LLM evals at face value. Fine-tuning a judge's prompt is a balancing act; it's easy to accidentally make it overly strict or completely lenient. In practice, chasing higher scores often yielded worse results, making it obvious that further tuning was just overfitting to the eval harness rather than solving the real problem.
 
+# GenMail — LLM-Powered Email Intelligence
 A product manager's email client (`pm@acme.com`) augmented with an LLM
 intelligence layer. Ten AI features analyze and act on email — summaries,
 triage, drafting, cross-inbox reasoning — built on a **RAG + MCP**
