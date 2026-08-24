@@ -1,9 +1,9 @@
-# GenMail — LLM-Powered Email Intelligence
+# GenMail — LLM-Powered Email Intelligence (local demo and personal project only)
 A product manager's email client (`pm@acme.com`) augmented with an LLM
 intelligence layer. Ten AI features analyze and act on email — summaries,
 triage, drafting, cross-inbox reasoning — built on a **RAG + MCP**
 architecture with a full evaluation suite, a React UI, and
-production-minded security.
+production-minded security. This is a local server. No auth was added yet.
 
 ### Personal Notes
 I used Claude (Sonnet) to build this project so I could get a hands-on feel for how it approaches development and learn major concepts along the way. Just a heads-up: the wordy write-up and presentation below are in Claude’s own words. Here are a few major lessons I learned from relying on Claude and using evals for a end-to-end build instead of writing it myself:
